@@ -2,6 +2,8 @@
 
 This project demonstrates how to simplify asynchronous and synchronous message handling using buses, handlers, channels, and consumers. It leverages RabbitMQ as the message broker to enable scalable, decoupled communication between services.
 
+![example.gif](assets/example.gif)
+
 ## Features
 - Supports both synchronous and asynchronous message handling
 - Utilizes message buses, handlers, channels, and consumers
