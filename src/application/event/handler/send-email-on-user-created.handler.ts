@@ -9,7 +9,6 @@ export class SendEmailOnUserCreatedHandler implements IMessageHandler<UserCreate
 
   handle(message: UserCreated): Promise<object | void> {
     //TODO Logic there
-
     this.sender.send(message.name);
 
     return Promise.resolve();
