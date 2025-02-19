@@ -9,10 +9,12 @@ import { InMemoryEmailSender } from './infrastructure/in-memory-email-sender';
 import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
 import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
+import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/messaging-redis-extension';
 
 @Module({
   imports: [
     MessagingRabbitmqExtensionModule,
+    MessagingRedisExtensionModule,
     MessagingModule.forRoot({
       buses: [
         {
@@ -27,12 +29,26 @@ import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
           name: 'event.bus',
           channels: ['async-event'],
         },
+        {
+          name: 'redis.command.bus',
+          channels: ['redis-channel'],
+        },
       ],
       channels: [
         new InMemoryChannelConfig({
           name: 'my-channel',
           middlewares: [],
           avoidErrorsForNotExistedHandlers: true,
+        }),
+        new RedisChannelConfig({
+          name: 'redis-channel',
+          middlewares: [],
+          avoidErrorsForNotExistedHandlers: true,
+          queue: 'my-queue',
+          connection: {
+            port: 6379,
+            host: '127.0.0.1',
+          },
         }),
         new AmqpChannelConfig({
           name: 'async-command',
