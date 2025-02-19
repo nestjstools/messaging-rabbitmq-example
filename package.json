@@ -23,8 +23,8 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
-    "@nestjstools/messaging": "^2.2.1",
-    "@nestjstools/messaging-rabbitmq-extension": "^2.2.0",
+    "@nestjstools/messaging": "^2.3.0",
+    "@nestjstools/messaging-rabbitmq-extension": "^2.3.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },

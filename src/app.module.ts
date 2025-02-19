@@ -8,6 +8,7 @@ import { MessagingRabbitmqExtensionModule } from '@nestjstools/messaging-rabbitm
 import { InMemoryEmailSender } from './infrastructure/in-memory-email-sender';
 import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
+import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { MiddlewareExample } from './infrastructure/middleware-example';
             MiddlewareExample,
           ],
           autoCreate: true,
+          enableConsumer: true,
         }),
         new AmqpChannelConfig({
           name: 'async-event',
@@ -64,6 +66,7 @@ import { MiddlewareExample } from './infrastructure/middleware-example';
   controllers: [AppController],
   providers: [
     InMemoryEmailSender,
+    Base64Normalizer,
     InMemorySmsSender,
     CreateUserHandler,
     MiddlewareExample,
