@@ -761,10 +761,10 @@
   dependencies:
     tslib "2.8.1"
 
-"@nestjstools/messaging-rabbitmq-extension@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-2.3.1.tgz#415376f8e3c979a99cd693119c2bfa14486a4647"
-  integrity sha512-ImiOXwsCwa3SJ0r7lAOH1PCcfKc8XszrufIaWSzwRrr2gOThF1IzkoQr6QAUJbKlWoMN38FM2oIJjVYCgttPcA==
+"@nestjstools/messaging-rabbitmq-extension@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-2.4.1.tgz#049393387af6822b5e3d25f8c8fa7ba52e8b20d6"
+  integrity sha512-hW0h0rTLw0gJm9thsctAlCE0U+N1/YfzxxnovoUfz29kSboBLDVhjlpMj47J8jY0cz/+IrrAVup7atwr/J72dw==
   dependencies:
     rabbitmq-client "^5.0.2"
 
@@ -775,10 +775,10 @@
   dependencies:
     bullmq "^5.41.3"
 
-"@nestjstools/messaging@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-2.3.1.tgz#40ae2699bab92ce8a0420534afe053cc8660b103"
-  integrity sha512-8Df/UnO4QXJieCfETEPZlkO/75k1m+y48MYDDXQZuEW5h2HCLt9Gd8PzM41dyX9qQkGvYdL+FzsQxZnq15VzIA==
+"@nestjstools/messaging@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-2.4.0.tgz#9b7c038f6157b77facec1098e1ab8e6e28f3a0e4"
+  integrity sha512-ptVN9VZvY92fw1Ni2U/TY0ICex/TOrO9XcQRjzcg9Gcidv+iRQLvSyxFDqkHbgFH91ht3TsN1CdWFYQ0UOxN2w==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
