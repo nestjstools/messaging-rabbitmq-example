@@ -891,10 +891,10 @@
   dependencies:
     bullmq "^5.41.3"
 
-"@nestjstools/messaging@^2.7.1", "@nestjstools/messaging@^2.X":
-  version "2.7.1"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.7.1.tgz"
-  integrity sha512-VbPPum5BGo5qXlViKmyU48Ymp/FKpKOVn/GTBKb6u9XVYcekvOdhWG+nW3dpgiZuxWOSb/0fEuQCEimbQiN7VA==
+"@nestjstools/messaging@^2.8.0", "@nestjstools/messaging@^2.X":
+  version "2.8.0"
+  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.8.0.tgz"
+  integrity sha512-G6upvyuU8Fk097bqrx5DeHUONaOeAWsO/iNEVER0i5I7p0/xZA/mxC+aJ4BNGoZNWVdnCbMViATnfm+Tl5vUYg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
