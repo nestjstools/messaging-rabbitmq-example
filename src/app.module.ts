@@ -58,6 +58,7 @@ import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/
           exchangeType: ExchangeType.TOPIC,
           queue: 'my_app.command',
           avoidErrorsForNotExistedHandlers: false,
+          deadLetterQueueFeature: true,
           middlewares: [
             MiddlewareExample,
           ],
@@ -73,6 +74,7 @@ import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/
           queue: 'my_app.event',
           autoCreate: true,
           enableConsumer: true,
+          deadLetterQueueFeature: true,
           avoidErrorsForNotExistedHandlers: true,
         }),
       ],
