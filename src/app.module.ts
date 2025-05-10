@@ -10,6 +10,10 @@ import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
 import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
 import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/messaging-redis-extension';
+import { CustomExceptionListener } from './infrastructure/custom.exception-listener';
+import {
+  ThrowExceptionOnUserCreatedHandler
+} from './application/event/handler/throw-exception-on-user-created.handler';
 
 @Module({
   imports: [
@@ -90,6 +94,8 @@ import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/
     MiddlewareExample,
     SendEmailOnUserCreatedHandler,
     SendSmsOnUserCreatedHandler,
+    CustomExceptionListener,
+    ThrowExceptionOnUserCreatedHandler,
   ],
 })
 export class AppModule {}
