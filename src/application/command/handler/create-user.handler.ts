@@ -1,5 +1,5 @@
 import { CreateUser } from '../create-user';
-import { IMessageBus, IMessageHandler, MessageBus, MessageHandler, RoutingMessage } from '@nestjstools/messaging';
+import { IMessageBus, IMessageHandler, MessageBus, MessageHandler, RoutingMessage, DenormalizeMessage } from '@nestjstools/messaging';
 import { UserCreated } from '../../event/user-created';
 
 @MessageHandler('my_app_command.create_user')
@@ -9,7 +9,8 @@ export class CreateUserHandler implements IMessageHandler<CreateUser>{
   ) {
   }
 
-  handle(message: CreateUser): Promise<object | void> {
+  handle(@DenormalizeMessage() message: CreateUser): Promise<object | void> {
+    console.log(message); // Check message instance
     // TODO Logic there
     console.log(`Creating user... ${message.name}`);
 

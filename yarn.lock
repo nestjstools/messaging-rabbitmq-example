@@ -891,10 +891,12 @@
   dependencies:
     bullmq "^5.41.3"
 
-"@nestjstools/messaging@^2.10.0", "@nestjstools/messaging@^2.X":
-  version "2.10.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.10.0.tgz"
-  integrity sha512-ztdSN2PLLy1QdPdntI3TIf6Su61h8CFunUXM5lqYv9NDJFpj0s8WqWEvUneNV9wf/x9HX5qYaNnN5pTvoFStoQ==
+"@nestjstools/messaging@^2.11.0", "@nestjstools/messaging@^2.X":
+  version "2.11.0"
+  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.11.0.tgz"
+  integrity sha512-kP8K8H3uUwkJafRnvGJ074a0sBNnEibDBqFHiUtz6PgTW2sRHtaDtFrPCVW0N40VzCRO86aNzFO0PTDNO9U2gA==
+  dependencies:
+    class-transformer "^0.5.1"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1853,6 +1855,11 @@ cjs-module-lexer@^1.0.0:
   version "1.4.3"
   resolved "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-1.4.3.tgz"
   integrity sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==
+
+class-transformer@*, class-transformer@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz"
+  integrity sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==
 
 cli-cursor@^3.1.0:
   version "3.1.0"
