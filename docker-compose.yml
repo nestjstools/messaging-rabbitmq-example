@@ -10,3 +10,23 @@ services:
     image: redis
     ports:
       - 6379:6379
+
+  pubsub:
+    image: google/cloud-sdk:latest
+    container_name: pubsub-emulator
+    command: >
+      gcloud beta emulators pubsub start
+      --host-port=0.0.0.0:8085
+    ports:
+      - "8085:8085"
+    environment:
+      PUBSUB_PROJECT_ID: test-project
+
+  elasticmq:
+    image: softwaremill/elasticmq
+    container_name: elasticmq
+    ports:
+      - "9324:9324"       # REST port
+    environment:
+      - JAVA_OPTS=-Dconfig.file=/opt/elasticmq.conf
+

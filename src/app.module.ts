@@ -14,11 +14,13 @@ import { CustomExceptionListener } from './infrastructure/custom.exception-liste
 import {
   ThrowExceptionOnUserCreatedHandler
 } from './application/event/handler/throw-exception-on-user-created.handler';
+import { AmazonSqsChannelConfig, MessagingAmazonSqsExtensionModule } from '@nestjstools/messaging-amazon-sqs-extension';
 
 @Module({
   imports: [
     MessagingRabbitmqExtensionModule,
     MessagingRedisExtensionModule,
+    MessagingAmazonSqsExtensionModule,
     MessagingModule.forRoot({
       buses: [
         {
@@ -36,6 +38,10 @@ import {
         {
           name: 'redis.command.bus',
           channels: ['redis-channel'],
+        },
+        {
+          name: 'sqs-message.bus',
+          channels: ['sqs-channel'],
         },
       ],
       channels: [
@@ -81,6 +87,20 @@ import {
           deadLetterQueueFeature: true,
           avoidErrorsForNotExistedHandlers: true,
         }),
+        new AmazonSqsChannelConfig({
+          name: 'sqs-channel',
+          queueName: 'ds',
+          endpoint: 'ds',
+          enableConsumer: true,
+          avoidErrorsForNotExistedHandlers: true,
+          region: 'elasticmq',
+          queueUrl: 'http://localhost:9324/queue/test_queue',
+          autoCreate: true,
+          credentials: {
+            accessKeyId: 'x',
+            secretAccessKey: 'x',
+          }
+        })
       ],
       debug: true,
     }),

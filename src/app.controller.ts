@@ -7,19 +7,26 @@ export class AppController {
   constructor(
     @MessageBus('command.bus') private commandBus: IMessageBus,
     @MessageBus('redis.command.bus') private redisCommandBus: IMessageBus,
+    @MessageBus('sqs-message.bus') private sqsMessageBus: IMessageBus,
     @MessageBus('message.bus') private ms: IMessageBus,
   ) {}
 
   @Get()
   createUserAsync(): string {
     this.commandBus.dispatch(new RoutingMessage(new CreateUser('John FROM Rabbit'), 'my_app_command.create_user'));
-
     return 'Message sent';
   }
 
   @Get('/redis')
   createUserAsyncViaRedisBus(): string {
     this.redisCommandBus.dispatch(new RoutingMessage(new CreateUser('John FROM REDIS'), 'my_app_command.create_user'));
+
+    return 'Message sent';
+  }
+
+  @Get('/sqs')
+  createUserAsyncViaPuSubBus(): string {
+    this.sqsMessageBus.dispatch(new RoutingMessage(new CreateUser('John FROM PubSub'), 'my_app_command.create_user'));
 
     return 'Message sent';
   }
