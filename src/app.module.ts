@@ -15,12 +15,17 @@ import {
   ThrowExceptionOnUserCreatedHandler
 } from './application/event/handler/throw-exception-on-user-created.handler';
 import { AmazonSqsChannelConfig, MessagingAmazonSqsExtensionModule } from '@nestjstools/messaging-amazon-sqs-extension';
+import {
+  GooglePubSubChannelConfig,
+  MessagingGooglePubSubExtensionModule,
+} from '@nestjstools/messaging-google-pubsub-extension';
 
 @Module({
   imports: [
     MessagingRabbitmqExtensionModule,
     MessagingRedisExtensionModule,
     MessagingAmazonSqsExtensionModule,
+    MessagingGooglePubSubExtensionModule,
     MessagingModule.forRoot({
       buses: [
         {
@@ -42,6 +47,10 @@ import { AmazonSqsChannelConfig, MessagingAmazonSqsExtensionModule } from '@nest
         {
           name: 'sqs-message.bus',
           channels: ['sqs-channel'],
+        },
+        {
+          name: 'pubsub-event.bus',
+          channels: ['pubsub-event'],
         },
       ],
       channels: [
@@ -100,6 +109,16 @@ import { AmazonSqsChannelConfig, MessagingAmazonSqsExtensionModule } from '@nest
             accessKeyId: 'x',
             secretAccessKey: 'x',
           }
+        }),
+        new GooglePubSubChannelConfig({
+          name: 'pubsub-event',
+          enableConsumer: true, // Enable if you want to consume messages
+          autoCreate: true, // Auto-create queue if it doesn't exist
+          credentials: { // Optional
+            projectId: 'test-project',
+          },
+          topicName: 'eventTopic',
+          subscriptionName: 'eventSubscriptionTopic',
         })
       ],
       debug: true,

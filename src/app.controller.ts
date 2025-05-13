@@ -8,6 +8,7 @@ export class AppController {
     @MessageBus('command.bus') private commandBus: IMessageBus,
     @MessageBus('redis.command.bus') private redisCommandBus: IMessageBus,
     @MessageBus('sqs-message.bus') private sqsMessageBus: IMessageBus,
+    @MessageBus('pubsub-event.bus') private pubSubEventbus: IMessageBus,
     @MessageBus('message.bus') private ms: IMessageBus,
   ) {}
 
@@ -25,8 +26,15 @@ export class AppController {
   }
 
   @Get('/sqs')
-  createUserAsyncViaPuSubBus(): string {
+  createUserBySqn(): string {
     this.sqsMessageBus.dispatch(new RoutingMessage(new CreateUser('John FROM PubSub'), 'my_app_command.create_user'));
+
+    return 'Message sent';
+  }
+
+  @Get('/pubsub')
+  createUserByPubSub(): string {
+    this.pubSubEventbus.dispatch(new RoutingMessage(new CreateUser('John FROM PubSub'), 'my_app_command.create_user'));
 
     return 'Message sent';
   }
