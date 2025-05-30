@@ -27,7 +27,7 @@ export class AppController {
 
   @Get('/sqs')
   createUserBySqn(): string {
-    this.sqsMessageBus.dispatch(new RoutingMessage(new CreateUser('John FROM PubSub'), 'my_app_command.create_user'));
+    this.sqsMessageBus.dispatch(new RoutingMessage(new CreateUser('John FROM Sqs'), 'my_app_command.create_user'));
 
     return 'Message sent';
   }
