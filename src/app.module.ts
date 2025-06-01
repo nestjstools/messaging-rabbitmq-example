@@ -19,6 +19,10 @@ import {
   GooglePubSubChannelConfig,
   MessagingGooglePubSubExtensionModule,
 } from '@nestjstools/messaging-google-pubsub-extension';
+import {
+  MessagingNatsExtensionModule
+} from '@nestjstools/messaging-nats-extension/lib/messaging-nats-extension.module';
+import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/channel/nats-channel.config';
 
 @Module({
   imports: [
@@ -26,6 +30,7 @@ import {
     MessagingRedisExtensionModule,
     MessagingAmazonSqsExtensionModule,
     MessagingGooglePubSubExtensionModule,
+    MessagingNatsExtensionModule,
     MessagingModule.forRoot({
       buses: [
         {
@@ -52,10 +57,21 @@ import {
           name: 'pubsub-event.bus',
           channels: ['pubsub-event'],
         },
+        {
+          name: 'nats.bus',
+          channels: ['nats-channel'],
+        },
       ],
       channels: [
         new InMemoryChannelConfig({
           name: 'my-channel',
+          middlewares: [],
+          avoidErrorsForNotExistedHandlers: true,
+        }),
+        new NatsChannelConfig({
+          name: 'nats-channel',
+          connectionUris: ['nats://localhost:4222'],
+          subscriberName: 'nats-event',
           middlewares: [],
           avoidErrorsForNotExistedHandlers: true,
         }),

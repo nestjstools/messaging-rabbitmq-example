@@ -22,6 +22,12 @@ services:
     environment:
       PUBSUB_PROJECT_ID: test-project
 
+  nats:
+    image: nats:latest
+    container_name: nats
+    ports:
+      - "4222:4222"
+
   elasticmq:
     image: softwaremill/elasticmq
     container_name: elasticmq

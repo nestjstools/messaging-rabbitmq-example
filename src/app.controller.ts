@@ -10,6 +10,7 @@ export class AppController {
     @MessageBus('sqs-message.bus') private sqsMessageBus: IMessageBus,
     @MessageBus('pubsub-event.bus') private pubSubEventbus: IMessageBus,
     @MessageBus('message.bus') private ms: IMessageBus,
+    @MessageBus('nats.bus') private natsBus: IMessageBus,
   ) {}
 
   @Get()
@@ -35,6 +36,13 @@ export class AppController {
   @Get('/pubsub')
   createUserByPubSub(): string {
     this.pubSubEventbus.dispatch(new RoutingMessage(new CreateUser('John FROM PubSub'), 'my_app_command.create_user'));
+
+    return 'Message sent';
+  }
+
+  @Get('/nats')
+  createUserByNats(): string {
+    this.natsBus.dispatch(new RoutingMessage(new CreateUser('John FROM Nats'), 'my_app_command.create_user'));
 
     return 'Message sent';
   }
