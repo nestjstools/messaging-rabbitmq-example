@@ -1384,10 +1384,10 @@
   dependencies:
     tslib "2.8.1"
 
-"@nestjstools/messaging-amazon-sqs-extension@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging-amazon-sqs-extension/-/messaging-amazon-sqs-extension-1.2.0.tgz"
-  integrity sha512-66iki0qw4M7mt2Jj9WymKETnHRroQ5P6soh9bRz5GVnp37K74vPgczDv/DT4ur9CD7lUnG/gctb2HJ5pYWytOQ==
+"@nestjstools/messaging-amazon-sqs-extension@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-amazon-sqs-extension/-/messaging-amazon-sqs-extension-1.3.0.tgz#9a51b0fdaa6075b710154c70f3f9e5313f0ea875"
+  integrity sha512-+zfwyvYPx9FqMLnbS+Uda5aKOwT5JceWN0OnVbjXP6y5VgN3yP9JCMPL2qIPKegWgEj9uMY7xZTJeQW9NK7Ydg==
   dependencies:
     "@aws-sdk/client-sqs" "^3.808.0"
 
@@ -1419,10 +1419,10 @@
   dependencies:
     bullmq "^5.41.3"
 
-"@nestjstools/messaging@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.11.0.tgz"
-  integrity sha512-kP8K8H3uUwkJafRnvGJ074a0sBNnEibDBqFHiUtz6PgTW2sRHtaDtFrPCVW0N40VzCRO86aNzFO0PTDNO9U2gA==
+"@nestjstools/messaging@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-2.17.0.tgz#15c70e2b869560ca50eb916757589a88d854559e"
+  integrity sha512-ASkbc0ADujSPff6xZseS0e9DNpNTatXm1hlkoobZhkcMIlKW6BmZVtt2jcwES9FBt9xBt/cW+S7o8NxLcMBwYA==
   dependencies:
     class-transformer "^0.5.1"
 

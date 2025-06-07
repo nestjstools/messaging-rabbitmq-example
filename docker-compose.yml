@@ -33,6 +33,7 @@ services:
     container_name: elasticmq
     ports:
       - "9324:9324"       # REST port
+      - "9325:9325"       # REST port
     environment:
       - JAVA_OPTS=-Dconfig.file=/opt/elasticmq.conf
 

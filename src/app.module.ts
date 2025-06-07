@@ -124,7 +124,8 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
           credentials: {
             accessKeyId: 'x',
             secretAccessKey: 'x',
-          }
+          },
+          deadLetterQueue: true,
         }),
         new GooglePubSubChannelConfig({
           name: 'pubsub-event',
