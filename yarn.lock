@@ -837,7 +837,7 @@
   resolved "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-linux-x64/-/msgpackr-extract-linux-x64-3.0.3.tgz"
   integrity sha512-cvwNfbP07pKUfq1uH+S6KJ7dT9K8WOE4ZiAcsrSes+UY55E/0jLYc+vq+DO7jlmqRb5zAggExKm0H7O/CBaesg==
 
-"@nestjs/cli@^11.0.0":
+"@nestjs/cli@^11.0.7":
   version "11.0.7"
   resolved "https://registry.npmjs.org/@nestjs/cli/-/cli-11.0.7.tgz"
   integrity sha512-svrP8j1R0/lQVJ8ZI3BlDtuZxmkvVJokUJSB04sr6uibunk2wHeVDDVLZvYBUorCdGU/RHJl1IufhqUBM91vAQ==
@@ -862,10 +862,10 @@
     webpack "5.99.6"
     webpack-node-externals "3.0.0"
 
-"@nestjs/common@^10.x||^11.x", "@nestjs/common@^11.0.0":
-  version "11.1.2"
-  resolved "https://registry.npmjs.org/@nestjs/common/-/common-11.1.2.tgz"
-  integrity sha512-cHh4OPH44PjaHM93D1jgE1HO/B7XTZVRDxy/cPuGgyMEA4p2zXO+qqcOgTMC5FYcp7dX9jLeCjXAU0ToFAnODw==
+"@nestjs/common@^10.x||^11.x", "@nestjs/common@^11.0.0", "@nestjs/common@^11.1.3":
+  version "11.1.3"
+  resolved "https://registry.npmjs.org/@nestjs/common/-/common-11.1.3.tgz"
+  integrity sha512-ogEK+GriWodIwCw6buQ1rpcH4Kx+G7YQ9EwuPySI3rS05pSdtQ++UhucjusSI9apNidv+QURBztJkRecwwJQXg==
   dependencies:
     file-type "21.0.0"
     iterare "1.2.1"
@@ -873,10 +873,10 @@
     tslib "2.8.1"
     uid "2.0.2"
 
-"@nestjs/core@^10.x||^11.x", "@nestjs/core@^11.0.0":
-  version "11.1.2"
-  resolved "https://registry.npmjs.org/@nestjs/core/-/core-11.1.2.tgz"
-  integrity sha512-QRuyxwu0BjNfmmmunsw1ylX7RSyfDQHt+xD+tKncdtgiMOOzAu+LA1gB4WoZnw4frQkk+qZbhEbM61cIjOxD3w==
+"@nestjs/core@^10.x||^11.x", "@nestjs/core@^11.0.0", "@nestjs/core@^11.1.3":
+  version "11.1.3"
+  resolved "https://registry.npmjs.org/@nestjs/core/-/core-11.1.3.tgz"
+  integrity sha512-5lTni0TCh8x7bXETRD57pQFnKnEg1T6M+VLE7wAmyQRIecKQU+2inRGZD+A4v2DC1I04eA0WffP0GKLxjOKlzw==
   dependencies:
     "@nuxt/opencollective" "0.4.1"
     fast-safe-stringify "2.1.1"
@@ -885,18 +885,18 @@
     tslib "2.8.1"
     uid "2.0.2"
 
-"@nestjs/platform-express@^11.0.0":
-  version "11.1.2"
-  resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-11.1.2.tgz"
-  integrity sha512-GlNwOT4htRp8RpZ+TpqGtSHwGKw/abdxxBRse40XE2SWs5ikaoujr9Yd+5sJWDNXB4QTftwb+FplXhyk1Ra+4A==
+"@nestjs/platform-express@^11.0.0", "@nestjs/platform-express@^11.1.3":
+  version "11.1.3"
+  resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-11.1.3.tgz"
+  integrity sha512-hEDNMlaPiBO72fxxX/CuRQL3MEhKRc/sIYGVoXjrnw6hTxZdezvvM6A95UaLsYknfmcZZa/CdG1SMBZOu9agHQ==
   dependencies:
     cors "2.8.5"
     express "5.1.0"
-    multer "2.0.0"
+    multer "2.0.1"
     path-to-regexp "8.2.0"
     tslib "2.8.1"
 
-"@nestjs/schematics@^11.0.0", "@nestjs/schematics@^11.0.1":
+"@nestjs/schematics@^11.0.1", "@nestjs/schematics@^11.0.5":
   version "11.0.5"
   resolved "https://registry.npmjs.org/@nestjs/schematics/-/schematics-11.0.5.tgz"
   integrity sha512-T50SCNyqCZ/fDssaOD7meBKLZ87ebRLaJqZTJPvJKjlib1VYhMOCwXYsr7bjMPmuPgiQHOwvppz77xN/m6GM7A==
@@ -907,10 +907,10 @@
     jsonc-parser "3.3.1"
     pluralize "8.0.0"
 
-"@nestjs/testing@^11.0.0":
-  version "11.1.2"
-  resolved "https://registry.npmjs.org/@nestjs/testing/-/testing-11.1.2.tgz"
-  integrity sha512-BQxVKUVW6gzEbbHAvmg5RgcP3s++pRgTCmsgaDF/DtcLRUeKi8SjAdqzLm14xbkMeibxOf3fNqM2iwqUKj8ffw==
+"@nestjs/testing@^11.1.3":
+  version "11.1.3"
+  resolved "https://registry.npmjs.org/@nestjs/testing/-/testing-11.1.3.tgz"
+  integrity sha512-CeXG6/eEqgFIkPkmU00y18Dd3DLOIDFhPItzJK1SWckKo6IhcnfoRJzGx75bmuvUMjb51j6An96S/+MJ2ty9jA==
   dependencies:
     tslib "2.8.1"
 
@@ -930,10 +930,10 @@
     bullmq "^5.52.2"
     semantic-release "^24.2.5"
 
-"@nestjstools/messaging@^2.16.0", "@nestjstools/messaging@^2.X":
-  version "2.16.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.16.0.tgz"
-  integrity sha512-PxsjumDlU0JV9igj662A4KHVeDNMxHGVQgrPCS1bR6X1impmpJnBoGuxschFuT0tdURzaLwFbOZZhPttYPtuHg==
+"@nestjstools/messaging@^2.18.0", "@nestjstools/messaging@^2.X":
+  version "2.18.0"
+  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.18.0.tgz"
+  integrity sha512-ZfFLlVWB9dB3WuCPhV42lfoAgBxjNam4DfXVMAK+WkUApqOKeBQyLRYdEgqRg7MXnSt7JXXk5XlnuKjmVrM6ug==
   dependencies:
     class-transformer "^0.5.1"
 
@@ -2356,7 +2356,7 @@ bullmq@^5.52.2:
     tslib "^2.0.0"
     uuid "^9.0.0"
 
-busboy@^1.0.0:
+busboy@^1.6.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
   integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
@@ -2440,9 +2440,7 @@ chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0, chalk@^4.1.2:
     supports-color "^7.1.0"
 
 chalk@^5.3.0:
-  version "5.4.1"
-  resolved "https://registry.npmjs.org/chalk/-/chalk-5.4.1.tgz"
-  integrity sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==
+  version "5.3.0"
 
 chalk@^5.4.1:
   version "5.4.1"
@@ -2680,14 +2678,14 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-concat-stream@^1.5.2:
-  version "1.6.2"
-  resolved "https://registry.npmjs.org/concat-stream/-/concat-stream-1.6.2.tgz"
-  integrity sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
+concat-stream@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz"
+  integrity sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==
   dependencies:
     buffer-from "^1.0.0"
     inherits "^2.0.3"
-    readable-stream "^2.2.2"
+    readable-stream "^3.0.2"
     typedarray "^0.0.6"
 
 config-chain@^1.1.11:
@@ -5407,7 +5405,7 @@ minizlib@^3.0.1:
     minipass "^7.0.4"
     rimraf "^5.0.5"
 
-mkdirp@^0.5.4:
+mkdirp@^0.5.6:
   version "0.5.6"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz"
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
@@ -5450,18 +5448,18 @@ msgpackr@^1.11.2:
   optionalDependencies:
     msgpackr-extract "^3.0.2"
 
-multer@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/multer/-/multer-2.0.0.tgz"
-  integrity sha512-bS8rPZurbAuHGAnApbM9d4h1wSoYqrOqkE+6a64KLMK9yWU7gJXBDDVklKQ3TPi9DRb85cRs6yXaC0+cjxRtRg==
+multer@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/multer/-/multer-2.0.1.tgz"
+  integrity sha512-Ug8bXeTIUlxurg8xLTEskKShvcKDZALo1THEX5E41pYCD2sCVub5/kIRIGqWNoqV6szyLyQKV6mD4QUrWE5GCQ==
   dependencies:
     append-field "^1.0.0"
-    busboy "^1.0.0"
-    concat-stream "^1.5.2"
-    mkdirp "^0.5.4"
+    busboy "^1.6.0"
+    concat-stream "^2.0.0"
+    mkdirp "^0.5.6"
     object-assign "^4.1.1"
-    type-is "^1.6.4"
-    xtend "^4.0.0"
+    type-is "^1.6.18"
+    xtend "^4.0.2"
 
 mute-stream@^2.0.0:
   version "2.0.0"
@@ -6366,7 +6364,7 @@ read@^4.0.0:
   dependencies:
     mute-stream "^2.0.0"
 
-readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@~2.3.6:
+readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@~2.3.6:
   version "2.3.8"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz"
   integrity sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==
@@ -6378,6 +6376,15 @@ readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.2.2, readable
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+readable-stream@^3.0.2:
+  version "3.6.2"
+  resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz"
+  integrity sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==
+  dependencies:
+    inherits "^2.0.3"
+    string_decoder "^1.1.1"
+    util-deprecate "^1.0.1"
 
 readable-stream@^3.4.0:
   version "3.6.2"
@@ -6405,7 +6412,7 @@ redis-parser@^3.0.0:
   dependencies:
     redis-errors "^1.0.0"
 
-"reflect-metadata@^0.1.12 || ^0.2.0", reflect-metadata@^0.2.0:
+"reflect-metadata@^0.1.12 || ^0.2.0", reflect-metadata@^0.2.0, reflect-metadata@^0.2.x:
   version "0.2.2"
   resolved "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.2.2.tgz"
   integrity sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==
@@ -6923,14 +6930,7 @@ streamsearch@^1.1.0:
   resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
-string_decoder@^1.1.1:
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz"
-  integrity sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==
-  dependencies:
-    safe-buffer "~5.2.0"
-
-string_decoder@~1.1.1:
+string_decoder@^1.1.1, string_decoder@~1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz"
   integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
@@ -7404,7 +7404,7 @@ type-fest@^4.39.1, type-fest@^4.41.0, type-fest@^4.6.0:
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-4.41.0.tgz"
   integrity sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==
 
-type-is@^1.6.4:
+type-is@^1.6.18:
   version "1.6.18"
   resolved "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz"
   integrity sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
@@ -7723,7 +7723,7 @@ write-file-atomic@^6.0.0:
     imurmurhash "^0.1.4"
     signal-exit "^4.0.1"
 
-xtend@^4.0.0, xtend@~4.0.1:
+xtend@^4.0.2, xtend@~4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
