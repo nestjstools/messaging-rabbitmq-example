@@ -14,12 +14,14 @@ import { CustomExceptionListener } from './infrastructure/custom.exception-liste
 import {
   ThrowExceptionOnUserCreatedHandler
 } from './application/event/handler/throw-exception-on-user-created.handler';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     MessagingRabbitmqExtensionModule,
     MessagingRedisExtensionModule,
-    MessagingModule.forRoot({
+    MessagingModule.forRootAsync({
       buses: [
         {
           name: 'message.bus',
@@ -38,50 +40,54 @@ import {
           channels: ['redis-channel'],
         },
       ],
-      channels: [
-        new InMemoryChannelConfig({
-          name: 'my-channel',
-          middlewares: [],
-          avoidErrorsForNotExistedHandlers: true,
-        }),
-        new RedisChannelConfig({
-          name: 'redis-channel',
-          middlewares: [],
-          avoidErrorsForNotExistedHandlers: true,
-          queue: 'my-queue',
-          connection: {
-            port: 6379,
-            host: '127.0.0.1',
-          },
-        }),
-        new AmqpChannelConfig({
-          name: 'async-command',
-          connectionUri: 'amqp://guest:guest@localhost:5672/',
-          exchangeName: 'my_app_command.exchange',
-          bindingKeys: ['my_app_command.#'],
-          exchangeType: ExchangeType.TOPIC,
-          queue: 'my_app.command',
-          avoidErrorsForNotExistedHandlers: false,
-          deadLetterQueueFeature: true,
-          middlewares: [
-            MiddlewareExample,
-          ],
-          autoCreate: true,
-          enableConsumer: true,
-        }),
-        new AmqpChannelConfig({
-          name: 'async-event',
-          connectionUri: 'amqp://guest:guest@localhost:5672/',
-          exchangeName: 'my_app_event.exchange',
-          bindingKeys: ['my_app_event.#'],
-          exchangeType: ExchangeType.TOPIC,
-          queue: 'my_app.event',
-          autoCreate: true,
-          enableConsumer: true,
-          deadLetterQueueFeature: true,
-          avoidErrorsForNotExistedHandlers: true,
-        }),
-      ],
+      inject: [ConfigService],
+      useChannelFactory: (configService: ConfigService) => {
+        const rabbitMqUrl = configService.get<string>('RABBITMQ_URI') ?? 'amqp://guest:guest@localhost:5672';
+        return [
+          new InMemoryChannelConfig({
+            name: 'my-channel',
+            middlewares: [],
+            avoidErrorsForNotExistedHandlers: true,
+          }),
+          new RedisChannelConfig({
+            name: 'redis-channel',
+            middlewares: [],
+            avoidErrorsForNotExistedHandlers: true,
+            queue: 'my-queue',
+            connection: {
+              port: 6379,
+              host: '127.0.0.1',
+            },
+          }),
+          new AmqpChannelConfig({
+            name: 'async-command',
+            connectionUri: rabbitMqUrl,
+            exchangeName: 'my_app_command.exchange',
+            bindingKeys: ['my_app_command.#'],
+            exchangeType: ExchangeType.TOPIC,
+            queue: 'my_app.command',
+            avoidErrorsForNotExistedHandlers: false,
+            deadLetterQueueFeature: true,
+            middlewares: [
+              MiddlewareExample,
+            ],
+            autoCreate: true,
+            enableConsumer: true,
+          }),
+          new AmqpChannelConfig({
+            name: 'async-event',
+            connectionUri: rabbitMqUrl,
+            exchangeName: 'my_app_event.exchange',
+            bindingKeys: ['my_app_event.#'],
+            exchangeType: ExchangeType.TOPIC,
+            queue: 'my_app.event',
+            autoCreate: true,
+            enableConsumer: true,
+            deadLetterQueueFeature: true,
+            avoidErrorsForNotExistedHandlers: true,
+          }),
+        ];
+      },
       debug: true,
     }),
   ],

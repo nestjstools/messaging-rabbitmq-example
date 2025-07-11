@@ -21,9 +21,10 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.1.3",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.1.3",
     "@nestjs/platform-express": "^11.1.3",
-    "@nestjstools/messaging": "^2.18.0",
+    "@nestjstools/messaging": "^2.19.0",
     "@nestjstools/messaging-rabbitmq-extension": "^2.9.0",
     "@nestjstools/messaging-redis-extension": "^1.1.0",
     "reflect-metadata": "^0.2.0",
