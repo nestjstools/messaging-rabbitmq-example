@@ -23,7 +23,7 @@
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
-    "@nestjstools/messaging": "^2.17.0",
+    "@nestjstools/messaging": "^2.19.0",
     "@nestjstools/messaging-amazon-sqs-extension": "1.3.0",
     "@nestjstools/messaging-google-pubsub-extension": "1.3.0",
     "@nestjstools/messaging-nats-extension": "^1.0.0",

@@ -31,7 +31,7 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
     MessagingAmazonSqsExtensionModule,
     MessagingGooglePubSubExtensionModule,
     MessagingNatsExtensionModule,
-    MessagingModule.forRoot({
+    MessagingModule.forRootAsync({
       buses: [
         {
           name: 'message.bus',
@@ -62,7 +62,7 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
           channels: ['nats-channel'],
         },
       ],
-      channels: [
+      useChannelFactory: () => [
         new InMemoryChannelConfig({
           name: 'my-channel',
           middlewares: [],
