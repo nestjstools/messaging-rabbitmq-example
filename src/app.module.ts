@@ -3,8 +3,13 @@ import { AppController } from './app.controller';
 import { CreateUserHandler } from './application/command/handler/create-user.handler';
 import { SendEmailOnUserCreatedHandler } from './application/event/handler/send-email-on-user-created.handler';
 import { SendSmsOnUserCreatedHandler } from './application/event/handler/send-sms-on-user-created.handler';
-import { AmqpChannelConfig, ExchangeType, InMemoryChannelConfig, MessagingModule } from '@nestjstools/messaging';
-import { MessagingRabbitmqExtensionModule } from '@nestjstools/messaging-rabbitmq-extension';
+import { InMemoryChannelConfig, MessagingModule } from '@nestjstools/messaging';
+import {
+  ExchangeType,
+  ExchangeType as et,
+  MessagingRabbitmqExtensionModule,
+  RmqChannelConfig,
+} from '@nestjstools/messaging-rabbitmq-extension';
 import { InMemoryEmailSender } from './infrastructure/in-memory-email-sender';
 import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
@@ -59,7 +64,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
               host: '127.0.0.1',
             },
           }),
-          new AmqpChannelConfig({
+          new RmqChannelConfig({
             name: 'async-command',
             connectionUri: rabbitMqUrl,
             exchangeName: 'my_app_command.exchange',
@@ -74,12 +79,12 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
             autoCreate: true,
             enableConsumer: true,
           }),
-          new AmqpChannelConfig({
+          new RmqChannelConfig({
             name: 'async-event',
             connectionUri: rabbitMqUrl,
             exchangeName: 'my_app_event.exchange',
             bindingKeys: ['my_app_event.#'],
-            exchangeType: ExchangeType.TOPIC,
+            exchangeType: et.TOPIC,
             queue: 'my_app.event',
             autoCreate: true,
             enableConsumer: true,
