@@ -950,10 +950,10 @@
   dependencies:
     bullmq "^5.52.2"
 
-"@nestjstools/messaging@^2.20.2":
-  version "2.20.2"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging/-/messaging-2.20.2.tgz"
-  integrity sha512-RpWLP4QX5DM+svfIQ67k5jzUqobgsOzpiZ4b145vUh1Op0GlOFdO/AB63nxCV+oyOy54ofIncZsOp+QA0GJz1w==
+"@nestjstools/messaging@^2.20.3":
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-2.20.3.tgz#898e4ee5d283e0be34e4a51b94472f684bd2330a"
+  integrity sha512-yqaDeiVM4EK4Fq68d16dXFjOyrQnEijdYwrU+a3EgkB2mwC6dXsuQsKVko1xa2l2MRK1b3ROCMqidprzhc931A==
   dependencies:
     class-transformer "^0.5.1"
 
