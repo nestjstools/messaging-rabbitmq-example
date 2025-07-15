@@ -1391,10 +1391,10 @@
   dependencies:
     "@aws-sdk/client-sqs" "^3.808.0"
 
-"@nestjstools/messaging-google-pubsub-extension@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging-google-pubsub-extension/-/messaging-google-pubsub-extension-1.3.0.tgz"
-  integrity sha512-rsfcKjh9SSaBjJFPe6fIZ7ltxMeiAcAqupF/rO0mbJm+sbrZhli8SCtltIfMnDQ4k+/YtYXgwtRxRxLKik/dNQ==
+"@nestjstools/messaging-google-pubsub-extension@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-google-pubsub-extension/-/messaging-google-pubsub-extension-1.4.0.tgz#29575433acbe5b0e302ef84f21722548ccd4964f"
+  integrity sha512-PEUO612NYcHLjeGVR/1QvVcxmy5LAkukDXVwkTgo9GH15TW/dC1zgIO3WWj6Djqf5SDYrZF9KxCm3rwSnHARkA==
   dependencies:
     "@google-cloud/pubsub" "^5.0.0"
 
