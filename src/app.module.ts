@@ -3,8 +3,8 @@ import { AppController } from './app.controller';
 import { CreateUserHandler } from './application/command/handler/create-user.handler';
 import { SendEmailOnUserCreatedHandler } from './application/event/handler/send-email-on-user-created.handler';
 import { SendSmsOnUserCreatedHandler } from './application/event/handler/send-sms-on-user-created.handler';
-import { AmqpChannelConfig, ExchangeType, InMemoryChannelConfig, MessagingModule } from '@nestjstools/messaging';
-import { MessagingRabbitmqExtensionModule } from '@nestjstools/messaging-rabbitmq-extension';
+import { InMemoryChannelConfig, MessagingModule } from '@nestjstools/messaging';
+import { MessagingRabbitmqExtensionModule, RmqChannelConfig, ExchangeType } from '@nestjstools/messaging-rabbitmq-extension';
 import { InMemoryEmailSender } from './infrastructure/in-memory-email-sender';
 import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
@@ -19,10 +19,7 @@ import {
   GooglePubSubChannelConfig,
   MessagingGooglePubSubExtensionModule,
 } from '@nestjstools/messaging-google-pubsub-extension';
-import {
-  MessagingNatsExtensionModule
-} from '@nestjstools/messaging-nats-extension/lib/messaging-nats-extension.module';
-import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/channel/nats-channel.config';
+import { MessagingNatsExtensionModule, NatsJetStreamChannelConfig } from '@nestjstools/messaging-nats-extension';
 
 @Module({
   imports: [
@@ -68,13 +65,29 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
           middlewares: [],
           avoidErrorsForNotExistedHandlers: true,
         }),
-        new NatsChannelConfig({
+        new NatsJetStreamChannelConfig({
           name: 'nats-channel',
           connectionUris: ['nats://localhost:4222'],
-          subscriberName: 'nats-event',
+          streamConfig: {
+            autoUpdate: true,
+            deliverSubjects: ['app.example_subject'],
+            streamName: 'new-stream2',
+          },
+          consumerConfig: {
+            autoUpdate: true,
+            durableName: 'nats-durable_name2',
+            subject: 'app.example_subject',
+          },
           middlewares: [],
           avoidErrorsForNotExistedHandlers: true,
         }),
+        // new NatsChannelConfig({
+        //   name: 'nats-channel',
+        //   connectionUris: ['nats://localhost:4222'],
+        //   subscriberName: 'nats-event',
+        //   middlewares: [],
+        //   avoidErrorsForNotExistedHandlers: true,
+        // }),
         new RedisChannelConfig({
           name: 'redis-channel',
           middlewares: [],
@@ -85,7 +98,7 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
             host: '127.0.0.1',
           },
         }),
-        new AmqpChannelConfig({
+        new RmqChannelConfig({
           name: 'async-command',
           connectionUri: 'amqp://guest:guest@localhost:5672/',
           exchangeName: 'my_app_command.exchange',
@@ -100,7 +113,7 @@ import { NatsChannelConfig } from '@nestjstools/messaging-nats-extension/lib/cha
           autoCreate: true,
           enableConsumer: true,
         }),
-        new AmqpChannelConfig({
+        new RmqChannelConfig({
           name: 'async-event',
           connectionUri: 'amqp://guest:guest@localhost:5672/',
           exchangeName: 'my_app_event.exchange',

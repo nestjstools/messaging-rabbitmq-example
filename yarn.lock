@@ -1398,19 +1398,19 @@
   dependencies:
     "@google-cloud/pubsub" "^5.0.0"
 
-"@nestjstools/messaging-nats-extension@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging-nats-extension/-/messaging-nats-extension-1.0.1.tgz"
-  integrity sha512-XPTIoNreaKO3AVI/NvpaGSSMX7qNVqxZug/OuJmqc+FKmjr7yEUInQ6jsGFKKlw79Rb4c76i9a10KgZrHrLZ6g==
+"@nestjstools/messaging-nats-extension@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-nats-extension/-/messaging-nats-extension-1.1.0.tgz#720e6b1ed29000588c5c20267f33022244ec5bcc"
+  integrity sha512-VAkpk2aYV7Mx/s5f+gOdathnBzsy5Bz5AIcLwEM5HmZRHglwDLwsThqZcN499RCYwG2+glCTnoHLyFvfZBc0Dg==
   dependencies:
     nats "^2.29.3"
 
-"@nestjstools/messaging-rabbitmq-extension@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.npmjs.org/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-2.6.0.tgz"
-  integrity sha512-lDvx1vgEnAcHYO04jY2CMidivMR3Kt3OzLH6eNRIGhAp1lW0tuj69KKIX3ZM4gt94bls1EMSdHYa+pP84DyObg==
+"@nestjstools/messaging-rabbitmq-extension@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-2.13.0.tgz#6f954d37d7802e453eb4538d7da39849ce92963a"
+  integrity sha512-8MDhMAmC7gFOcSJl+pkpqGlwBiNQq1dwwhPlkHexvr40hh4cDqmWOtaavdW0FVF/qMSx0MdFgs+rNQH252R11w==
   dependencies:
-    rabbitmq-client "^5.0.2"
+    rabbitmq-client "^5.0.4"
 
 "@nestjstools/messaging-redis-extension@^1.0.0":
   version "1.0.0"
@@ -5132,7 +5132,7 @@ mute-stream@^2.0.0:
 
 nats@^2.29.3:
   version "2.29.3"
-  resolved "https://registry.npmjs.org/nats/-/nats-2.29.3.tgz"
+  resolved "https://registry.yarnpkg.com/nats/-/nats-2.29.3.tgz#86099c9bc193464d4f8cbb1d3504335bd2719ec6"
   integrity sha512-tOQCRCwC74DgBTk4pWZ9V45sk4d7peoE2njVprMRCBXrhJ5q5cYM7i6W+Uvw2qUrcfOSnuisrX7bEx3b3Wx4QA==
   dependencies:
     nkeys.js "1.1.0"
@@ -5154,7 +5154,7 @@ neo-async@^2.6.2:
 
 nkeys.js@1.1.0:
   version "1.1.0"
-  resolved "https://registry.npmjs.org/nkeys.js/-/nkeys.js-1.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/nkeys.js/-/nkeys.js-1.1.0.tgz#de83a9a13f396c5b6d7c412788f4b9f7f35d4c18"
   integrity sha512-tB/a0shZL5UZWSwsoeyqfTszONTt4k2YS0tuQioMOD180+MbombYVgzDUYHlx+gejYK6rgf08n/2Df99WY0Sxg==
   dependencies:
     tweetnacl "1.0.3"
@@ -5518,10 +5518,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-rabbitmq-client@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.npmjs.org/rabbitmq-client/-/rabbitmq-client-5.0.2.tgz"
-  integrity sha512-rXEcDxBcGAokczKfVsyIhrIXdS4xcOqrMCMlBIMNEIxP43dNwApJWdt2PN3vKtjO/xCVAfOTT5r3rQAdXhuyyA==
+rabbitmq-client@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/rabbitmq-client/-/rabbitmq-client-5.0.4.tgz#e3a71e3559356fa698ffba6ea031b01ff49ff929"
+  integrity sha512-1l7skuiYqee8FoVHYLUxiE/1/OtHnVkzXtAjW4z6R6KYqJO7PZkGtZaX4vC3rW4fgmjFlPmzJjrFCaF8ZUlDuA==
 
 randombytes@^2.1.0:
   version "2.1.0"
@@ -6223,7 +6223,7 @@ tslib@2.8.1, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.6.2:
 
 tweetnacl@1.0.3:
   version "1.0.3"
-  resolved "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
 
 type-check@^0.4.0, type-check@~0.4.0:

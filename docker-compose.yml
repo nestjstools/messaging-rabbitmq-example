@@ -25,8 +25,10 @@ services:
   nats:
     image: nats:latest
     container_name: nats
+    command: ["-js", "-m", "8222"]
     ports:
-      - "4222:4222"
+      - "4222:4222"   # Client connections
+      - "8222:8222"   # Monitoring endpoint (required for NatsUI)
 
   elasticmq:
     image: softwaremill/elasticmq
