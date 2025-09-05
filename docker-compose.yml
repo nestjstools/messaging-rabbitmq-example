@@ -1,7 +1,7 @@
 services:
 
   rabbitmq:
-    image: rabbitmq:3.11.20-management-alpine
+    image: rabbitmq:4.1.0-management-alpine
     ports:
       - 5672:5672
       - 15672:15672
