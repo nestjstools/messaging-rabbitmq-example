@@ -6,7 +6,6 @@ import { SendSmsOnUserCreatedHandler } from './application/event/handler/send-sm
 import { InMemoryChannelConfig, MessagingModule } from '@nestjstools/messaging';
 import {
   ExchangeType,
-  ExchangeType as et,
   MessagingRabbitmqExtensionModule,
   RmqChannelConfig,
 } from '@nestjstools/messaging-rabbitmq-extension';
@@ -84,7 +83,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
             connectionUri: rabbitMqUrl,
             exchangeName: 'my_app_event.exchange',
             bindingKeys: ['my_app_event.#'],
-            exchangeType: et.TOPIC,
+            exchangeType: ExchangeType.TOPIC,
             queue: 'my_app.event',
             autoCreate: true,
             enableConsumer: true,
