@@ -936,10 +936,10 @@
   dependencies:
     tslib "2.8.1"
 
-"@nestjstools/messaging-rabbitmq-extension@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-3.0.1.tgz#a27165789fe66201a53eb1bff4310c65fd664fd2"
-  integrity sha512-wM+bfy0/I4Sxe4NYuFDIc6fv6SvuQZJ1ao6V329oDCOjepoBjrNhUKJxaYc5pFeaVDHQwuvkj2vlcODYB+el3g==
+"@nestjstools/messaging-rabbitmq-extension@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-3.0.4.tgz#4cc5729ecc7ffe31246f542ac81a54f873620de3"
+  integrity sha512-AXbZZt2DaAJ2zFGoPs98pC6ZQa3YKhFl1sk7ZwSyqXh5zSyg4zBO6j96vv4Ro2QatihPGvOKJFHs8+9p3RSjUA==
   dependencies:
     amqplib "^0.10.9"
 
@@ -950,10 +950,10 @@
   dependencies:
     bullmq "^5.52.2"
 
-"@nestjstools/messaging@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-3.0.0.tgz#83c6ed98d4f6872b2991b7c104fa7edf957a22be"
-  integrity sha512-31ietOYyJume62A+fGHILkdtmiS5xhDJ13MJ/nPfsKHUL7XbmJzamiFy6HoEvSAZt03Hli+H9g8Y4n9FgVHKcQ==
+"@nestjstools/messaging@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-3.0.2.tgz#6c99fda05730e0dd0e35883b23af1a7ab5d16f94"
+  integrity sha512-ZP6Wn0AyztuR6dvHlHqTZ3gKW844IqTxh8PkLXVkjhIMzxf6Cb1n8yEw06bHE+FQvxcwLrY+/cstjyhnt8r6YQ==
   dependencies:
     class-transformer "^0.5.1"
 
@@ -1941,7 +1941,7 @@ cjs-module-lexer@^1.0.0:
 
 class-transformer@^0.5.1:
   version "0.5.1"
-  resolved "https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz"
+  resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.5.1.tgz#24147d5dffd2a6cea930a3250a677addf96ab336"
   integrity sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==
 
 cli-cursor@^3.1.0:
