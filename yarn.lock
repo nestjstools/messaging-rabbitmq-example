@@ -936,10 +936,10 @@
   dependencies:
     tslib "2.8.1"
 
-"@nestjstools/messaging-rabbitmq-extension@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-3.0.4.tgz#4cc5729ecc7ffe31246f542ac81a54f873620de3"
-  integrity sha512-AXbZZt2DaAJ2zFGoPs98pC6ZQa3YKhFl1sk7ZwSyqXh5zSyg4zBO6j96vv4Ro2QatihPGvOKJFHs8+9p3RSjUA==
+"@nestjstools/messaging-rabbitmq-extension@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-rabbitmq-extension/-/messaging-rabbitmq-extension-3.0.5.tgz#6dddbdd543b68804147de509b0b65be9e8aa4fbb"
+  integrity sha512-J++rHrlj8gC6tC2UoalB2UryeJz3NhtsQAU31DMqovpurJrm7AM/CBjJD6pksWoZAHL1xnhKSVXHKHpDgcrjfw==
   dependencies:
     amqplib "^0.10.9"
 
