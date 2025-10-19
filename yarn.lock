@@ -944,10 +944,10 @@
     amqp-connection-manager "^5.0.0"
     amqplib "^0.10.9"
 
-"@nestjstools/messaging-redis-extension@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-redis-extension/-/messaging-redis-extension-1.3.1.tgz#2b2e6b3f70d356a6fb1d55092982d55a881f99f9"
-  integrity sha512-+Y1IeNhuWN+lYiG93BqXTaw9E3A4/uoAERezgoeKXtiMtBO8Wld5RMX/0THOcRjz5zCe1HTteiHvDRGbKK21qw==
+"@nestjstools/messaging-redis-extension@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging-redis-extension/-/messaging-redis-extension-1.4.0.tgz#af6a5c9db95997d21c46d488048adcccf75b56b6"
+  integrity sha512-7H5vkdmUb1CF3u97w7iX6PoY6jJKnNIbh0y0GJ1Gn64yc7/ybtyEGehsX3WZT9C6ZGV9DeOUh5wiIhv9sFJ9bA==
   dependencies:
     bullmq "^5.52.2"
 
