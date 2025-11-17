@@ -951,10 +951,10 @@
   dependencies:
     bullmq "^5.52.2"
 
-"@nestjstools/messaging@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-3.0.2.tgz#6c99fda05730e0dd0e35883b23af1a7ab5d16f94"
-  integrity sha512-ZP6Wn0AyztuR6dvHlHqTZ3gKW844IqTxh8PkLXVkjhIMzxf6Cb1n8yEw06bHE+FQvxcwLrY+/cstjyhnt8r6YQ==
+"@nestjstools/messaging@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@nestjstools/messaging/-/messaging-3.1.1.tgz#3628eb6bf87e034ef92b8b9788d3b58d6ef4847c"
+  integrity sha512-M+m+fJVUHET71WG8d+tYFZPmEIOBcG9FuNMryjvQsnUqW4eD0dzr2ANzxySrTiM72Bfe989jGjfkYKPiVyvTPw==
   dependencies:
     class-transformer "^0.5.1"
 
