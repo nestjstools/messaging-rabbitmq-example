@@ -16,7 +16,7 @@ import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
 import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/messaging-redis-extension';
 import { CustomExceptionListener } from './infrastructure/custom.exception-listener';
 import {
-  ThrowExceptionOnUserCreatedHandler
+  ThrowExceptionOnUserCreatedHandler,
 } from './application/event/handler/throw-exception-on-user-created.handler';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
@@ -89,6 +89,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
             enableConsumer: true,
             deadLetterQueueFeature: true,
             avoidErrorsForNotExistedHandlers: true,
+            retryMessage: 2,
+            retryMessageTtl: 2000,
+            forceRecreateRetryQueue: true,
           }),
         ];
       },
@@ -108,4 +111,5 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     ThrowExceptionOnUserCreatedHandler,
   ],
 })
-export class AppModule {}
+export class AppModule {
+}
