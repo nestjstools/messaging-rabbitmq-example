@@ -9,12 +9,12 @@ export class CreateUserHandler implements IMessageHandler<CreateUser>{
   ) {
   }
 
-  handle(@DenormalizeMessage() message: CreateUser): Promise<object | void> {
+  async handle(@DenormalizeMessage() message: CreateUser): Promise<object | void> {
     console.log(message); // Check message instance
     // TODO Logic there
     console.log(`Creating user... ${message.name}`);
 
-    this.eventBus.dispatch(new RoutingMessage(new UserCreated(message.name), 'my_app_event.user_created'))
+    await this.eventBus.dispatch(new RoutingMessage(new UserCreated(message.name), 'my_app_event.user_created'))
 
     return Promise.resolve();
   }

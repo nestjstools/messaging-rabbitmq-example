@@ -1358,40 +1358,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-rabbitmq-extension@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:3.4.0"
+"@nestjstools/messaging-rabbitmq-extension@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:4.0.0"
   dependencies:
     amqp-connection-manager: "npm:^5.0.0"
     amqplib: "npm:^0.10.9"
   peerDependencies:
     "@nestjs/common": ^10.x||^11.x
     "@nestjs/core": ^10.x||^11.x
-    "@nestjstools/messaging": ^3.x
+    "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.X
     rxjs: ^7.x
-  checksum: 10c0/80987a87798b3f6bbedc6552e44a4415cf034825ae06553417e301472fff494c9a194ce7934d3791b00db9e0ae5c0d5d69230df9d56daf5ebed8749344766799
+  checksum: 10c0/cd67ebfc371c1a94cde0582f1f31d8dd5d5d361640355c7f84332ac05b2412e68d82aca2a0ac0a240ef6940570938cd19b3d8a6e3824e7ae1f6267b766858b8c
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-redis-extension@npm:^1.4.0":
-  version: 1.4.1
-  resolution: "@nestjstools/messaging-redis-extension@npm:1.4.1"
+"@nestjstools/messaging-redis-extension@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@nestjstools/messaging-redis-extension@npm:2.0.0"
   dependencies:
-    bullmq: "npm:^5.61.0"
+    bullmq: "npm:^5.70.1"
   peerDependencies:
     "@nestjs/common": ^10.x||^11.x
     "@nestjs/core": ^10.x||^11.x
-    "@nestjstools/messaging": ^2.x||3.x
+    "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/d4f2c6538f66167e41ffdbd18d413d2b9a192fdf2bd99aea145babd29d3186413ec47f903a89f097b5f3100e00f1a28017d50737d155e353d312388d619402dc
+  checksum: 10c0/6446fb0aab5ff7418b8a09fb772e34a2a9ac7fae841605c0795f7032de511d832972e1559957cad67e8068f7e2752ae633d75fe4a7aef1fcb0f62d014f865aab
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@nestjstools/messaging@npm:3.1.1"
+"@nestjstools/messaging@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@nestjstools/messaging@npm:4.0.0"
   dependencies:
     class-transformer: "npm:^0.5.1"
   peerDependencies:
@@ -1399,7 +1399,7 @@ __metadata:
     "@nestjs/core": ^10.x||^11.x
     reflect-metadata: ^0.2.x
     rxjs: ^7.x
-  checksum: 10c0/93d0f63d8ed7ba68362471e3cd7e3065232c93a9c958340eaf4f720db025e710130de6c3bd2ba233c811bfd8d0a7bd01066ffe7f1b15205be80ab6e3586145b8
+  checksum: 10c0/62ed427eb4c98ff67f30bf2c0e76a25fb5d5fc557541208b08727f5bebf37ca118c169b33ff5c51df8f40e66dbb7c1def7177be010b075a9df2a925de1a65a07
   languageName: node
   linkType: hard
 
@@ -2648,18 +2648,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bullmq@npm:^5.61.0":
-  version: 5.69.1
-  resolution: "bullmq@npm:5.69.1"
+"bullmq@npm:^5.70.1":
+  version: 5.70.1
+  resolution: "bullmq@npm:5.70.1"
   dependencies:
     cron-parser: "npm:4.9.0"
-    ioredis: "npm:5.9.2"
+    ioredis: "npm:5.9.3"
     msgpackr: "npm:1.11.5"
     node-abort-controller: "npm:3.1.1"
     semver: "npm:7.7.4"
     tslib: "npm:2.8.1"
     uuid: "npm:11.1.0"
-  checksum: 10c0/4474d67e5a0f1f8f7cb3edfd265e7a6d1bbbfd7aed75bc91089a4a3e36301018bdf5c1f86d7ba2eae70b104fe6bca37ac92751f60ee87347a77a5446e9a7b589
+  checksum: 10c0/97fd90c56cb0546e8dcb2d3207104df4de28ba7672d96c9840cb0d5d80b3e2a0819b53290d3ef1d6980ba4841b340503d9a48318e5e687ccf72ca70007022aaf
   languageName: node
   linkType: hard
 
@@ -4267,9 +4267,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ioredis@npm:5.9.2":
-  version: 5.9.2
-  resolution: "ioredis@npm:5.9.2"
+"ioredis@npm:5.9.3":
+  version: 5.9.3
+  resolution: "ioredis@npm:5.9.3"
   dependencies:
     "@ioredis/commands": "npm:1.5.0"
     cluster-key-slot: "npm:^1.1.0"
@@ -4280,7 +4280,7 @@ __metadata:
     redis-errors: "npm:^1.2.0"
     redis-parser: "npm:^3.0.0"
     standard-as-callback: "npm:^2.1.0"
-  checksum: 10c0/9732a3adab56c63a0e76bd1a1c891e4201448c44ab31e7e9aee8e83005be07597a4969199593c0d59642fb3fcd64ce00e9a8fad6c92d80e648df20b4b2b184ce
+  checksum: 10c0/f3d5c811bc1f320236f488ee6bd8a4857c7c0e8e5de1154b064afc03eb35aafbf24156e430025061b6939c58a5a6b424d86814d726439f5811b2e9c56c710dd4
   languageName: node
   linkType: hard
 
@@ -5282,9 +5282,9 @@ __metadata:
     "@nestjs/platform-express": "npm:^11.1.3"
     "@nestjs/schematics": "npm:^11.0.5"
     "@nestjs/testing": "npm:^11.1.3"
-    "@nestjstools/messaging": "npm:3.1.1"
-    "@nestjstools/messaging-rabbitmq-extension": "npm:^3.4.0"
-    "@nestjstools/messaging-redis-extension": "npm:^1.4.0"
+    "@nestjstools/messaging": "npm:4.0.0"
+    "@nestjstools/messaging-rabbitmq-extension": "npm:^4.0.0"
+    "@nestjstools/messaging-redis-extension": "npm:^2.0.0"
     "@types/express": "npm:^5.0.0"
     "@types/jest": "npm:^29.5.2"
     "@types/node": "npm:^20.3.1"
