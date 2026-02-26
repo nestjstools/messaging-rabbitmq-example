@@ -1374,9 +1374,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-redis-extension@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@nestjstools/messaging-redis-extension@npm:2.0.0"
+"@nestjstools/messaging-redis-extension@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@nestjstools/messaging-redis-extension@npm:2.0.1"
   dependencies:
     bullmq: "npm:^5.70.1"
   peerDependencies:
@@ -1385,7 +1385,7 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/6446fb0aab5ff7418b8a09fb772e34a2a9ac7fae841605c0795f7032de511d832972e1559957cad67e8068f7e2752ae633d75fe4a7aef1fcb0f62d014f865aab
+  checksum: 10c0/fedcdfedeea89576e057629ee07c3edcec287197686b54edbd6cc2747b81938115d2b748078ce767550265935bd1dfa51a692e573737d24d17aa4c20ef15c54d
   languageName: node
   linkType: hard
 
@@ -5284,7 +5284,7 @@ __metadata:
     "@nestjs/testing": "npm:^11.1.3"
     "@nestjstools/messaging": "npm:4.0.0"
     "@nestjstools/messaging-rabbitmq-extension": "npm:^4.0.0"
-    "@nestjstools/messaging-redis-extension": "npm:^2.0.0"
+    "@nestjstools/messaging-redis-extension": "npm:^2.0.1"
     "@types/express": "npm:^5.0.0"
     "@types/jest": "npm:^29.5.2"
     "@types/node": "npm:^20.3.1"
