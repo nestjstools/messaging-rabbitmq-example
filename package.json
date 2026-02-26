@@ -26,7 +26,7 @@
     "@nestjstools/messaging": "^4.0.0",
     "@nestjstools/messaging-amazon-sqs-extension": "1.5.1",
     "@nestjstools/messaging-google-pubsub-extension": "2.0.0",
-    "@nestjstools/messaging-nats-extension": "^1.2.1",
+    "@nestjstools/messaging-nats-extension": "2.0.0",
     "@nestjstools/messaging-rabbitmq-extension": "^4.0.0",
     "@nestjstools/messaging-redis-extension": "^2.0.0",
     "reflect-metadata": "^0.2.0",
