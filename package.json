@@ -24,7 +24,7 @@
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "@nestjstools/messaging": "^4.0.0",
-    "@nestjstools/messaging-amazon-sqs-extension": "1.5.1",
+    "@nestjstools/messaging-amazon-sqs-extension": "2.0.0",
     "@nestjstools/messaging-google-pubsub-extension": "2.0.0",
     "@nestjstools/messaging-nats-extension": "2.0.0",
     "@nestjstools/messaging-rabbitmq-extension": "^4.0.0",
