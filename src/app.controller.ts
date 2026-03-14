@@ -17,6 +17,13 @@ export class AppController {
     return 'Message sent';
   }
 
+  @Get('/sync')
+  async sync(): Promise<string> {
+    await this.ms.dispatch(new RoutingMessage(new CreateUser('John FROM Sync'), 'my_app_command.create_user'));
+
+    return 'Message sent';
+  }
+
   @Get('/redis')
   createUserAsyncViaRedisBus(): string {
     this.redisCommandBus.dispatch(new RoutingMessage(new CreateUser('John FROM REDIS'), 'my_app_command.create_user'));
