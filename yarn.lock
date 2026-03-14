@@ -1873,9 +1873,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-amazon-sqs-extension@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@nestjstools/messaging-amazon-sqs-extension@npm:2.0.0"
+"@nestjstools/messaging-amazon-sqs-extension@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@nestjstools/messaging-amazon-sqs-extension@npm:2.1.0"
   dependencies:
     "@aws-sdk/client-sqs": "npm:^3.998.0"
   peerDependencies:
@@ -1884,13 +1884,13 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/aab08aecbb8a47e9a62538cb2e3a7986b1e4f3d4cc0f854f291b573faf3110b7d39b5297bc6ed5deac8c11e50f2745650811e7006486815f61d2fccfd360fc0b
+  checksum: 10c0/96f9cc989c934440e4770a3186d03789f4034c8f836198345cda045db45dad5a7abf10a017de38f4d7ba2fd98a6900448fbb5a5fe7f58941db6ad1e22aa04c90
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-google-pubsub-extension@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@nestjstools/messaging-google-pubsub-extension@npm:2.0.0"
+"@nestjstools/messaging-google-pubsub-extension@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@nestjstools/messaging-google-pubsub-extension@npm:2.1.0"
   dependencies:
     "@google-cloud/pubsub": "npm:^5.3.0"
   peerDependencies:
@@ -1899,13 +1899,13 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/778bdc72cbcbb0c98da259e6ff3dec4c3a9d1c6854e89b4601afb7560a232061811ec9f103a2b1006e2e0d06b61ec954b2932f834f8aa38ba28d537635f46359
+  checksum: 10c0/4932dc9ba535b83ca408728a277ecb4e5b8e2a21376d8254adb24da26fb5ead889a3e7600c40f8c271d3fd5c98f16a48144b602e5bb7d278bb8bbbef8ed47e39
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-nats-extension@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@nestjstools/messaging-nats-extension@npm:2.0.0"
+"@nestjstools/messaging-nats-extension@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@nestjstools/messaging-nats-extension@npm:2.1.0"
   dependencies:
     nats: "npm:^2.29.3"
   peerDependencies:
@@ -1914,13 +1914,13 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/8f76df081a677196d21760428dd6d32f9220f24fe26b822f3094cb48790746aded668905cbf3e710b75e7728f25357b0b545f978ef570f8af44a28912fcf5870
+  checksum: 10c0/da5b60555d3cd7dbda6b637479f18eb586837319fff7cb010fd8b3f11934d8a16cc12b9909572c8b8b95464c5f94b7a164dab276b5034fb5b8356810257ce7a0
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-rabbitmq-extension@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:4.0.0"
+"@nestjstools/messaging-rabbitmq-extension@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:4.1.0"
   dependencies:
     amqp-connection-manager: "npm:^5.0.0"
     amqplib: "npm:^0.10.9"
@@ -1930,13 +1930,13 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.X
     rxjs: ^7.x
-  checksum: 10c0/cd67ebfc371c1a94cde0582f1f31d8dd5d5d361640355c7f84332ac05b2412e68d82aca2a0ac0a240ef6940570938cd19b3d8a6e3824e7ae1f6267b766858b8c
+  checksum: 10c0/9d86045e54a57ec6bd5a42e7d6d930eb603ee4bc0f0ef978d460fd6908019116b68971dc24b06e322023dc572722f130e7f17a2ef93b18207397df526ff8a95b
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-redis-extension@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@nestjstools/messaging-redis-extension@npm:2.0.0"
+"@nestjstools/messaging-redis-extension@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@nestjstools/messaging-redis-extension@npm:2.1.0"
   dependencies:
     bullmq: "npm:^5.70.1"
   peerDependencies:
@@ -1945,13 +1945,13 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/6446fb0aab5ff7418b8a09fb772e34a2a9ac7fae841605c0795f7032de511d832972e1559957cad67e8068f7e2752ae633d75fe4a7aef1fcb0f62d014f865aab
+  checksum: 10c0/615ac7fea4ba64aaaf3b708d4c50099a06d1f3a1582f33182361c09963d33cde10e5105d68a7f79fbb756ab8e98ebadc65ab917be074c227ee1e3ecdd710f2c0
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@nestjstools/messaging@npm:4.0.0"
+"@nestjstools/messaging@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@nestjstools/messaging@npm:4.1.0"
   dependencies:
     class-transformer: "npm:^0.5.1"
   peerDependencies:
@@ -1959,7 +1959,7 @@ __metadata:
     "@nestjs/core": ^10.x||^11.x
     reflect-metadata: ^0.2.x
     rxjs: ^7.x
-  checksum: 10c0/62ed427eb4c98ff67f30bf2c0e76a25fb5d5fc557541208b08727f5bebf37ca118c169b33ff5c51df8f40e66dbb7c1def7177be010b075a9df2a925de1a65a07
+  checksum: 10c0/490377a7379bfddff850d13db7e8411965bfddac89ffdd8f8a28a4509b9c526df73ac62f6f1ba4eb61e63440866eb650bc7503eaed322b1f262dcbc9ce005814
   languageName: node
   linkType: hard
 
@@ -6896,12 +6896,12 @@ __metadata:
     "@nestjs/platform-express": "npm:^11.0.0"
     "@nestjs/schematics": "npm:^11.0.0"
     "@nestjs/testing": "npm:^11.0.0"
-    "@nestjstools/messaging": "npm:^4.0.0"
-    "@nestjstools/messaging-amazon-sqs-extension": "npm:2.0.0"
-    "@nestjstools/messaging-google-pubsub-extension": "npm:2.0.0"
-    "@nestjstools/messaging-nats-extension": "npm:2.0.0"
-    "@nestjstools/messaging-rabbitmq-extension": "npm:^4.0.0"
-    "@nestjstools/messaging-redis-extension": "npm:^2.0.0"
+    "@nestjstools/messaging": "npm:^4.1.0"
+    "@nestjstools/messaging-amazon-sqs-extension": "npm:2.1.0"
+    "@nestjstools/messaging-google-pubsub-extension": "npm:2.1.0"
+    "@nestjstools/messaging-nats-extension": "npm:2.1.0"
+    "@nestjstools/messaging-rabbitmq-extension": "npm:^4.1.0"
+    "@nestjstools/messaging-redis-extension": "npm:^2.1.0"
     "@types/express": "npm:^5.0.0"
     "@types/jest": "npm:^29.5.2"
     "@types/node": "npm:^20.3.1"
