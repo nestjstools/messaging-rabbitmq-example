@@ -5,7 +5,7 @@ import { ExceptionListener, MessagingExceptionListener, ExceptionContext } from 
 @MessagingExceptionListener()
 export class CustomExceptionListener implements ExceptionListener {
   onException(context: ExceptionContext): Promise<void> {
-    console.log(`Here I can handle exception If I want and do some action`);
+    console.log(`\nHere I can handle exception If I want and do some action [CustomExceptionListener]`);
     return Promise.resolve();
   }
 }

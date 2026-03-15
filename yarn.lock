@@ -1358,9 +1358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-rabbitmq-extension@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:4.0.0"
+"@nestjstools/messaging-rabbitmq-extension@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@nestjstools/messaging-rabbitmq-extension@npm:4.1.0"
   dependencies:
     amqp-connection-manager: "npm:^5.0.0"
     amqplib: "npm:^0.10.9"
@@ -1370,7 +1370,7 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.X
     rxjs: ^7.x
-  checksum: 10c0/cd67ebfc371c1a94cde0582f1f31d8dd5d5d361640355c7f84332ac05b2412e68d82aca2a0ac0a240ef6940570938cd19b3d8a6e3824e7ae1f6267b766858b8c
+  checksum: 10c0/9d86045e54a57ec6bd5a42e7d6d930eb603ee4bc0f0ef978d460fd6908019116b68971dc24b06e322023dc572722f130e7f17a2ef93b18207397df526ff8a95b
   languageName: node
   linkType: hard
 
@@ -1389,9 +1389,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@nestjstools/messaging@npm:4.1.0"
+"@nestjstools/messaging@npm:4.1.1":
+  version: 4.1.1
+  resolution: "@nestjstools/messaging@npm:4.1.1"
   dependencies:
     class-transformer: "npm:^0.5.1"
   peerDependencies:
@@ -1399,7 +1399,7 @@ __metadata:
     "@nestjs/core": ^10.x||^11.x
     reflect-metadata: ^0.2.x
     rxjs: ^7.x
-  checksum: 10c0/490377a7379bfddff850d13db7e8411965bfddac89ffdd8f8a28a4509b9c526df73ac62f6f1ba4eb61e63440866eb650bc7503eaed322b1f262dcbc9ce005814
+  checksum: 10c0/ae650d88e86ab3439aec7caa32a75e8307388f3e86d4a4ee400a7558e7dbd4386b5742ffe5df49a1a89191760acdff427dde4d9dc4391ac72268080068fd2cd5
   languageName: node
   linkType: hard
 
@@ -5282,8 +5282,8 @@ __metadata:
     "@nestjs/platform-express": "npm:^11.1.3"
     "@nestjs/schematics": "npm:^11.0.5"
     "@nestjs/testing": "npm:^11.1.3"
-    "@nestjstools/messaging": "npm:4.1.0"
-    "@nestjstools/messaging-rabbitmq-extension": "npm:^4.0.0"
+    "@nestjstools/messaging": "npm:4.1.1"
+    "@nestjstools/messaging-rabbitmq-extension": "npm:^4.1.0"
     "@nestjstools/messaging-redis-extension": "npm:^2.0.1"
     "@types/express": "npm:^5.0.0"
     "@types/jest": "npm:^29.5.2"
