@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { CreateUserHandler } from './application/command/handler/create-user.handler';
 import { SendEmailOnUserCreatedHandler } from './application/event/handler/send-email-on-user-created.handler';
@@ -19,6 +19,7 @@ import {
   ThrowExceptionOnUserCreatedHandler,
 } from './application/event/handler/throw-exception-on-user-created.handler';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message-handler-execution-hook';
 
 @Module({
   imports: [
@@ -109,6 +110,11 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     SendSmsOnUserCreatedHandler,
     CustomExceptionListener,
     ThrowExceptionOnUserCreatedHandler,
+    AfterMessageHandlerExecutionHook,
+    {
+      provide: Logger,
+      useClass: Logger,
+    }
   ],
 })
 export class AppModule {
