@@ -78,6 +78,7 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
             ],
             autoCreate: true,
             enableConsumer: true,
+            forceRecreateQueue: true,
           }),
           new RmqChannelConfig({
             name: 'async-event',
@@ -90,9 +91,10 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
             enableConsumer: true,
             deadLetterQueueFeature: true,
             avoidErrorsForNotExistedHandlers: true,
-            retryMessage: 2,
+            retryMessage: 1,
             retryMessageTtl: 2000,
-            forceRecreateRetryQueue: true,
+            forceRecreateRetryQueue: false,
+            forceRecreateQueue: true,
           }),
         ];
       },

@@ -12,7 +12,12 @@ export class AppController {
 
   @Get()
   createUserAsync(): string {
-    this.commandBus.dispatch(new RoutingMessage(new CreateUser('John FROM Rabbit'), 'my_app_command.create_user'));
+    this.commandBus.dispatch(
+      new RoutingMessage(
+        new CreateUser('John FROM Rabbit'),
+        'my_app_command.create_user',
+      ),
+    );
 
     return 'Message sent';
   }
