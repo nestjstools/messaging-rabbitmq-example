@@ -1753,9 +1753,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjstools/messaging-redis-extension@file:../messaging/packages/messaging-redis-extension::locator=messaging-rabbitmq-example%40workspace%3A.":
-  version: 2.2.0
-  resolution: "@nestjstools/messaging-redis-extension@file:../messaging/packages/messaging-redis-extension#../messaging/packages/messaging-redis-extension::hash=9c4229&locator=messaging-rabbitmq-example%40workspace%3A."
+"@nestjstools/messaging-redis-extension@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@nestjstools/messaging-redis-extension@npm:2.2.1"
   dependencies:
     bullmq: "npm:^5.81.3"
   peerDependencies:
@@ -1764,7 +1764,7 @@ __metadata:
     "@nestjstools/messaging": ^4.x
     reflect-metadata: ^0.2.0
     rxjs: ^7.x
-  checksum: 10c0/8b136a10bda31512e5a42b410a9420e8d834f026672f203fa431401e4db55608392439bf5ad220e54ef0b3c28c0e4d5358a845e263e663ed3ffd03b6c16ab1dd
+  checksum: 10c0/97be0c3749054998365c967133d47ca8bca845beb2a63cb37154669c770be4e0174128afc6a1bf0b4aadad81b6c0ccabde72a07683f80cebb7483bbcf0563c0e
   languageName: node
   linkType: hard
 
@@ -6152,7 +6152,7 @@ __metadata:
     "@nestjstools/messaging-google-pubsub-extension": "npm:^2.2.0"
     "@nestjstools/messaging-nats-extension": "npm:^3.1.0"
     "@nestjstools/messaging-rabbitmq-extension": "npm:^4.4.0"
-    "@nestjstools/messaging-redis-extension": "file:../messaging/packages/messaging-redis-extension"
+    "@nestjstools/messaging-redis-extension": "npm:^2.2.1"
     "@types/express": "npm:^5.0.0"
     "@types/jest": "npm:^29.5.2"
     "@types/node": "npm:^20.3.1"
