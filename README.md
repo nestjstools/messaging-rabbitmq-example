@@ -1,13 +1,13 @@
-# Example Project: Message Handling with RabbitMQ
+# Example Project: Message Handling with RabbitMQ, Redis, and MQTT
 
-This project demonstrates how to simplify asynchronous and synchronous message handling using buses, handlers, channels, and consumers. It leverages RabbitMQ as the message broker to enable scalable, decoupled communication between services.
+This project demonstrates how to simplify asynchronous and synchronous message handling using buses, handlers, channels, and consumers. It includes RabbitMQ, Redis, and an MQTT (Mosquitto) broker for scalable, decoupled messaging.
 
 ![example.gif](assets/example.gif)
 
 ## Features
 - Supports both synchronous and asynchronous message handling
 - Utilizes message buses, handlers, channels, and consumers
-- Dockerized RabbitMQ setup for easy deployment
+- Dockerized RabbitMQ, Redis, and MQTT (Mosquitto) setup for easy deployment
 - Scalable and reliable architecture
 
 ## Prerequisites
@@ -23,15 +23,18 @@ git clone git@github.com:nestjstools/messaging-rabbitmq-example.git
 cd messaging-rabbitmq-example
 ```
 
-### 2. Start App with RabbitMQ
+### 2. Start the messaging services
 ```sh
 make start
 ```
-This will start RabbitMQ in a Docker container.
+This starts RabbitMQ, Redis, and MQTT in Docker. MQTT listens on `mqtt://localhost:1883`.
+
+Set `MQTT_URI` to use another broker; it defaults to `mqtt://localhost:1883`. The MQTT example uses `my_app_command.create_user` as both the MQTT topic and the NestJS routing key; dots are valid in MQTT topic names.
 
 
 ### 4. Got to endpoints and see results in console
 ```sh
 * http://localhost:3000
 * http://localhost:3000/not-existed-handler
+* http://localhost:3000/mqtt
 ```

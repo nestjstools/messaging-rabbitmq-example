@@ -1,5 +1,5 @@
 export class InMemoryEmailSender {
   async send(name: string): Promise<void> {
-    console.log(`Sending email... for user ${name}`)
+    console.log(`Sending email... for user ${name}`);
   }
 }

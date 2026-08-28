@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import {
-  MessagingNormalizer, MessageNormalizer,
-} from '@nestjstools/messaging';
+import { MessagingNormalizer, MessageNormalizer } from '@nestjstools/messaging';
 import { Buffer } from 'buffer';
 
 @Injectable()
@@ -18,7 +16,7 @@ export class Base64Normalizer implements MessageNormalizer {
 
   normalize(message: object, type: string): Promise<string> {
     const jsonString = JSON.stringify(message);
-    const encoded =  Buffer.from(jsonString, 'utf-8').toString('base64');
+    const encoded = Buffer.from(jsonString, 'utf-8').toString('base64');
     console.log(encoded); // here is base64
     return Promise.resolve(encoded);
   }

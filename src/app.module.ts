@@ -13,11 +13,16 @@ import { InMemoryEmailSender } from './infrastructure/in-memory-email-sender';
 import { InMemorySmsSender } from './infrastructure/in-memory-sms-sender';
 import { MiddlewareExample } from './infrastructure/middleware-example';
 import { Base64Normalizer } from './infrastructure/base64-normalizer.service';
-import { MessagingRedisExtensionModule, RedisChannelConfig } from '@nestjstools/messaging-redis-extension';
-import { CustomExceptionListener } from './infrastructure/custom.exception-listener';
 import {
-  ThrowExceptionOnUserCreatedHandler,
-} from './application/event/handler/throw-exception-on-user-created.handler';
+  MessagingRedisExtensionModule,
+  RedisChannelConfig,
+} from '@nestjstools/messaging-redis-extension';
+import {
+  MessagingMqttExtensionModule,
+  MqttChannelConfig,
+} from '@nestjstools/messaging-mqtt-extension';
+import { CustomExceptionListener } from './infrastructure/custom.exception-listener';
+import { ThrowExceptionOnUserCreatedHandler } from './application/event/handler/throw-exception-on-user-created.handler';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message-handler-execution-hook';
 
@@ -26,6 +31,7 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
     ConfigModule.forRoot({ isGlobal: true }),
     MessagingRabbitmqExtensionModule,
     MessagingRedisExtensionModule,
+    MessagingMqttExtensionModule,
     MessagingModule.forRootAsync({
       buses: [
         {
@@ -44,10 +50,18 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
           name: 'redis.command.bus',
           channels: ['redis-channel'],
         },
+        {
+          name: 'mqtt.message.bus',
+          channels: ['mqtt-channel'],
+        },
       ],
       inject: [ConfigService],
       useChannelFactory: (configService: ConfigService) => {
-        const rabbitMqUrl = configService.get<string>('RABBITMQ_URI') ?? 'amqp://guest:guest@localhost:5672';
+        const rabbitMqUrl =
+          configService.get<string>('RABBITMQ_URI') ??
+          'amqp://guest:guest@localhost:5672';
+        const mqttUrl =
+          configService.get<string>('MQTT_URI') ?? 'mqtt://localhost:1883';
         return [
           new InMemoryChannelConfig({
             name: 'my-channel',
@@ -64,6 +78,14 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
               host: '127.0.0.1',
             },
           }),
+          new MqttChannelConfig({
+            name: 'mqtt-channel',
+            brokerUrl: mqttUrl,
+            clientId: 'messaging-rabbitmq-example',
+            subscriptions: [{ topicFilter: 'my_app_command/#', qos: 0 }],
+            avoidErrorsForNotExistedHandlers: false,
+            enableConsumer: true,
+          }),
           new RmqChannelConfig({
             name: 'async-command',
             connectionUri: rabbitMqUrl,
@@ -73,9 +95,7 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
             queue: 'my_app.command',
             avoidErrorsForNotExistedHandlers: false,
             deadLetterQueueFeature: true,
-            middlewares: [
-              MiddlewareExample,
-            ],
+            middlewares: [MiddlewareExample],
             autoCreate: true,
             enableConsumer: true,
           }),
@@ -114,8 +134,7 @@ import { AfterMessageHandlerExecutionHook } from './infrastructure/after-message
     {
       provide: Logger,
       useClass: Logger,
-    }
+    },
   ],
 })
-export class AppModule {
-}
+export class AppModule {}
