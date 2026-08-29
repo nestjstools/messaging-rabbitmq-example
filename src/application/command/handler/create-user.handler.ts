@@ -1,5 +1,6 @@
 import { CreateUser } from '../create-user';
-import { IMessageBus, IMessageHandler, MessageBus, MessageHandler, RoutingMessage, DenormalizeMessage } from '@nestjstools/messaging';
+import type { IMessageBus, IMessageHandler } from '@nestjstools/messaging';
+import { MessageBus, MessageHandler, RoutingMessage, DenormalizeMessage } from '@nestjstools/messaging';
 import { UserCreated } from '../../event/user-created';
 
 @MessageHandler('my_app_command.create_user')

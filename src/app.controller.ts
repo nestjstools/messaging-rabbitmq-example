@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { CreateUser } from './application/command/create-user';
-import { IMessageBus, MessageBus, RoutingMessage } from '@nestjstools/messaging';
+import type { IMessageBus } from '@nestjstools/messaging';
+import { MessageBus, RoutingMessage } from '@nestjstools/messaging';
 
 @Controller()
 export class AppController {
