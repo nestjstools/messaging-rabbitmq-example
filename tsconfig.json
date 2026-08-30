@@ -20,6 +20,9 @@
     "rootDir": "./src",
     "types": ["vitest/globals", "node"]
   },
-  "exclude": ["node_modules", "dist", "vitest.config.ts", "vitest.config.e2e.ts"],
+  "exclude": ["node_modules", "dist",
+    "test/vitest.config.ts",
+    "test/vitest.config.e2e.ts"
+  ],
   "include": ["src"]
 }
